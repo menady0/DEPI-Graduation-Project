@@ -1,7 +1,6 @@
 .background  {
   background-color: #D8D2C2;
   min-height: 100vh;
-  /* width: 100vw; */
 }
 .back {
   position: absolute;
@@ -12,6 +11,7 @@
 }
 i {
   cursor: pointer;
+  color: #1E1E1E;
 }
 section p {
   margin-top: 1.8em;
@@ -23,16 +23,60 @@ section p {
   padding-top: 1.8em;
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 10px; */
 }
 .head input {
   border-radius: 25px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   border: 1px solid gray;
   outline: none;
   padding: 3px 15px;
   font-size: 12px;
-  width: 80%;
+}
+.head i {
+  margin-left: 10px;
+}
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.search i{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+.search input {
+  opacity: 0;
+  width: 0%;
+  transition: .5s;
+}
+.search:hover input {
+  width: 100%;
+  opacity: 1;
+}
+.cart{
+  position: relative;
+  cursor: pointer;
+}
+.cart i {
+  font-size: 24px;
+}
+.cart span {
+  position: absolute;
+  top: 1px;
+  right: -5px;
+  font-size: 10px;
+  color: #FA2B57;
+  background-color: white;
+  padding: 1px 5px;
+  border-radius: 50%;
+  /* width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 .parent {
   margin-top: 40px;
@@ -47,13 +91,7 @@ section p {
   width: 100%;
   border-radius: 15px;
 }
-span {
-  background-color: red;
-  border-radius: 10px;
-  padding: 3px 6px;
-  display: inline-block;
-  margin-top: 5px;
-}
+
 .box {
   padding: 0;
 }
@@ -69,6 +107,11 @@ span {
 }
 
 @media screen and (max-width: 576px) {
+  .head div:first-of-type {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 1032px) {
   .head div:first-of-type {
     padding-left: 20px;
   }
