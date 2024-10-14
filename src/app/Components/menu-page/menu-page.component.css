@@ -1,0 +1,75 @@
+.background  {
+  background-color: #D8D2C2;
+  min-height: 100vh;
+  /* width: 100vw; */
+}
+.back {
+  position: absolute;
+  left: 3vw;
+  top: 1em;
+  font-size: 24px;
+  color: #1E1E1E;
+}
+i {
+  cursor: pointer;
+}
+section p {
+  margin-top: 1.8em;
+}
+.head {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.8em;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 10px; */
+}
+.head input {
+  border-radius: 25px;
+  margin-right: 20px;
+  border: 1px solid gray;
+  outline: none;
+  padding: 3px 15px;
+  font-size: 12px;
+  width: 80%;
+}
+.parent {
+  margin-top: 40px;
+}
+.myCard {
+  background-color: #1E1E1E;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.myCard img {
+  width: 100%;
+  border-radius: 15px;
+}
+span {
+  background-color: red;
+  border-radius: 10px;
+  padding: 3px 6px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.box {
+  padding: 0;
+}
+.box input {
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid gray;
+  width: 50%;
+}
+.box i,
+.myCard div:first-of-type {
+  color: #D8D2C2;
+}
+
+@media screen and (max-width: 576px) {
+  .head div:first-of-type {
+    padding-left: 20px;
+  }
+}
