@@ -1,0 +1,19 @@
+.org-color{
+  color: #E47F31;
+}
+.parent{
+  background-color: #0C0904;
+  color: white;
+  padding: 40px 0;
+}
+.links {
+  width: 10%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.links i {
+  color: #E47F31;
+}

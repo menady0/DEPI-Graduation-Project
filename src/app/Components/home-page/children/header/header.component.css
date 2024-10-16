@@ -1,0 +1,304 @@
+/* .d1{
+  background-image: url("../../../../../../public/Home/Background.png");
+  height: 100vh;
+  background-size: cover;
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+
+.logo img {
+width: 60px;
+height: 80px;
+left: 78px;
+top: 19px;
+}
+
+
+
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  position: relative; 
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #ff6600;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a.contact::after {
+  display: none; 
+}
+
+.nav-links li a.contact {
+  background-color: #ff6600; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px; 
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.contact:hover {
+  background-color: #333; 
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  opacity: 0.8;
+}
+
+
+
+.d2{
+  margin-bottom: 350px;
+  margin-left: 60px;
+  margin-top: 80px;
+  color: white;
+}
+
+
+.btn{
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  
+}
+.arrow svg:nth-of-type(2){
+  opacity: .8;
+}
+.arrow svg:last-of-type{
+  opacity: .3;
+}
+.socialMedia {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+.socialMedia a {
+  color: white;
+} */
+.d1{
+  background-image: url("../../../../../../public/header/Background.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px 50px; */
+  text-align: center;
+}
+
+  /* Logo */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  /* padding: 5px 10px; */
+  position: relative; /* Needed for the underline effect */
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #ff6600;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a.contact::after {
+  display: none; /* Disable the underline for "Contact us" */
+}
+
+.nav-links li a.contact {
+  background-color: #ff6600; /* Black background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px; /* Fully rounded corners */
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.contact:hover {
+  background-color: #333; /* Darker black when hovering */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* Hover effect to underline other links */
+}
+
+.nav-links li a:hover {
+  opacity: 0.8;
+}
+
+
+
+.d2{
+  margin-bottom: 350px;
+  margin-top: 180px;
+  color: white;
+}
+
+
+
+.btn{
+  /* width: 150px; */
+  /* height: 50px; */
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  
+}
+.arrow svg:nth-of-type(2){
+  opacity: .8;
+}
+.arrow svg:last-of-type{
+  opacity: .3;
+}
+.socialMedia {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+.socialMedia a {
+  color: white;
+}
+.scrollText{
+  color: white;
+}
+
+
+.logocolor{
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 26px;
+}
+.org-color{
+  color: #ff6600;
+}
+.logotext{
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.contactus{
+  font-size: 12px;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 8px 25px;
+  border: 1px solid #e47f31;
+}
+.contactus:hover {
+  background-color: #e47f31;
+  
+}
+.contactus a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-links{
+  padding: 10px 20px 0 20px;
+  font-size: 18px;
+}
+
+
+
+
+
+.logos{
+  background-color: #D8D2C2;
+  text-align: center;
+  padding: 50px 0;
+}
+.logo{
+  cursor: pointer;
+  font-size: 50px;
+  color: #e47f31;
+}
+.logoH{
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.logos .col-4 {
+  padding: 0;
+}
+.bestsellers{
+  text-align: center;
+  padding: 70px 0 70px 0;
+  background-color: #0c0904;
+}
+.besthead{
+  color: #e47f31;
+  padding-bottom: 30px;
+}
+.card {
+  background-color: white;
+}
+
+.cardbtn{
+  background-color: #e47f31;
+  color: white;
+  /* padding: 10px 50px; */
+}
+

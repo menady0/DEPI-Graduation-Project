@@ -1,1 +1,51 @@
-<p>add-to-cart-page works!</p>
+<div class="background">
+  <div class="fw-bold pt-5 p-lg-4" routerLink="/menu">Your Cart</div>
+  <section id="cart-container" class="container my-5">
+    <table class="table" w-75 m-auto>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Image</td>
+          <td>Product</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Total</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let product of inCard">
+          <td>
+            <h5 class="mt-4">{{product.id}}</h5>
+          </td>
+          <td>
+            <img [src]="product.imgURL" alt="" />
+          </td>
+          <td>
+            <h5 class="mt-4">{{product.name}}</h5>
+          </td>
+          <td>
+            <h5 class="mt-4">{{product.price | currency}}</h5>
+          </td>
+          <td>
+            <p>{{product.quantity}}</p>
+          </td>
+          <td>
+            <h5 class="mt-4">{{product.quantity * product.price | currency}}</h5>
+          </td>
+          <td>
+            <button class="x mt-3" (click)="delete(product)"><i class="bi bi-x"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="confirm d-flex justify-content-between">
+      <button class="confirmbtn" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Home</button>
+      <button class="confirmbtn" (click)="confirm()">
+        Confirm
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+</div>

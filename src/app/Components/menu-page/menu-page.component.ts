@@ -4,11 +4,12 @@ import { RouterLink } from '@angular/router';
 import { ProductsService } from '../../Modules/products.service';
 import { Product } from '../../Modules/Product';
 import { FormsModule } from '@angular/forms';
+import { AddToCartPageComponent } from '../add-to-cart-page/add-to-cart-page.component';
 
 @Component({
   selector: 'app-menu-page',
   standalone: true,
-  imports: [RouterLink, CommonModule, FormsModule],
+  imports: [RouterLink, CommonModule, FormsModule, AddToCartPageComponent],
   templateUrl: './menu-page.component.html',
   styleUrl: './menu-page.component.css'
 })

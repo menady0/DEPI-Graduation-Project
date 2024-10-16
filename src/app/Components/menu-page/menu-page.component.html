@@ -10,7 +10,7 @@
         <input type="text" placeholder="Search..." #inp>
         <i class="bi bi-search" (click)="search(inp.value)"></i>
       </div>
-        <div class="cart">
+        <div class="cart" routerLink="/cart">
           <i class="bi bi-cart-fill"></i>
           <span *ngIf="cart > 0">{{ cart }}</span>
         </div>
