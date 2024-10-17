@@ -13,28 +13,22 @@ import { RouterLink } from '@angular/router';
 })
 export class AddToCartPageComponent {
   inCard:Product[]
+  Products:Product[]
   constructor(private _ProductsService:ProductsService){
     this.inCard = _ProductsService.addToCard()
+    this.Products = _ProductsService.getProducts()
   }
   delete(product:Product){
-    // const storedArray = JSON.parse(localStorage.getItem('myObjects') || '[]');
-    // const updatedArray = storedArray.filter((item: any) => item.id !== product.id);
-    // localStorage.setItem('myObjects', JSON.stringify(updatedArray));
     for(let i = 0; i < this.inCard.length; i++){
       if(product.name == this.inCard[i].name){
         this.inCard.splice(i, 1);
         break;
       }
     }
-    // console.log(`Item with id ${product.id} removed from localStorage. Updated array:`, updatedArray);
+    const index = this.Products.findIndex(obj => obj.name === product.name)
+    this.Products[index].quantity = 0    
   }
   confirm(){
-    if(this.inCard.length != 0){
-      // localStorage.setItem('myObjects', JSON.stringify(this.inCard));
-      alert("Operation Confirmed!")
-    }
-    else
-      alert("There is nothing in the cart!!")
-    // console.log('Array added to localStorage:', this.inCard);
+    alert("Operation Confirmed!")
   }
 }

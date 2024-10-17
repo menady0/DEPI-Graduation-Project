@@ -1,120 +1,3 @@
-/* .d1{
-  background-image: url("../../../../../../public/Home/Background.png");
-  height: 100vh;
-  background-size: cover;
-}
-
-
-
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  text-align: center;
-}
-
-
-.logo img {
-width: 60px;
-height: 80px;
-left: 78px;
-top: 19px;
-}
-
-
-
-
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 5px 10px;
-  position: relative; 
-}
-
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background-color: #ff6600;
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s ease;
-}
-
-.nav-links li a.contact::after {
-  display: none; 
-}
-
-.nav-links li a.contact {
-  background-color: #ff6600; 
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px; 
-  font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease;
-}
-
-.nav-links li a.contact:hover {
-  background-color: #333; 
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-.nav-links li a:hover {
-  opacity: 0.8;
-}
-
-
-
-.d2{
-  margin-bottom: 350px;
-  margin-left: 60px;
-  margin-top: 80px;
-  color: white;
-}
-
-
-.btn{
-  width: 150px;
-  height: 50px;
-  margin-top: 20px;
-}
-
-
-.scroll {
-  position: absolute;
-  bottom: 20px;
-  
-}
-.arrow svg:nth-of-type(2){
-  opacity: .8;
-}
-.arrow svg:last-of-type{
-  opacity: .3;
-}
-.socialMedia {
-  position: absolute;
-  bottom: 20px;
-  right: 40px;
-}
-.socialMedia a {
-  color: white;
-} */
 .d1{
   background-image: url("../../../../../../public/header/Background.png");
   background-size: cover;
@@ -125,7 +8,6 @@ top: 19px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 20px 50px; */
   text-align: center;
 }
 
@@ -140,9 +22,8 @@ top: 19px;
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
-  /* padding: 5px 10px; */
   position: relative; /* Needed for the underline effect */
 }
 
@@ -150,10 +31,10 @@ top: 19px;
   content: "";
   position: absolute;
   width: 0;
-  height: 3px;
-  background-color: #ff6600;
+  height: 1px;
+  background-color: var(--secondColor);
   left: 0;
-  bottom: -5px;
+  bottom: -3px;
   transition: width 0.3s ease;
 }
 
@@ -162,7 +43,7 @@ top: 19px;
 }
 
 .nav-links li a.contact {
-  background-color: #ff6600; /* Black background */
+  background-color: var(--secondColor); /* Black background */
   color: white;
   padding: 10px 20px;
   border-radius: 20px; /* Fully rounded corners */
@@ -180,7 +61,7 @@ top: 19px;
 }
 
 .nav-links li a:hover {
-  opacity: 0.8;
+  color: white;
 }
 
 
@@ -194,8 +75,6 @@ top: 19px;
 
 
 .btn{
-  /* width: 150px; */
-  /* height: 50px; */
   margin-top: 20px;
   padding: 10px 20px;
 }
@@ -232,7 +111,7 @@ top: 19px;
   font-size: 26px;
 }
 .org-color{
-  color: #ff6600;
+  color: var(--secondColor);
 }
 .logotext{
   color: white;
@@ -245,10 +124,10 @@ top: 19px;
   background-color: transparent;
   border-radius: 25px;
   padding: 8px 25px;
-  border: 1px solid #e47f31;
+  border: 1px solid var(--secondColor);
 }
 .contactus:hover {
-  background-color: #e47f31;
+  background-color: var(--secondColor);
   
 }
 .contactus a {
@@ -266,14 +145,14 @@ top: 19px;
 
 
 .logos{
-  background-color: #D8D2C2;
+  background-color: var(--thirdColor);
   text-align: center;
   padding: 50px 0;
 }
 .logo{
   cursor: pointer;
   font-size: 50px;
-  color: #e47f31;
+  color: var(--secondColor);
 }
 .logoH{
   color: black;
@@ -289,7 +168,7 @@ top: 19px;
   background-color: #0c0904;
 }
 .besthead{
-  color: #e47f31;
+  color: var(--secondColor);
   padding-bottom: 30px;
 }
 .card {
@@ -297,8 +176,7 @@ top: 19px;
 }
 
 .cardbtn{
-  background-color: #e47f31;
+  background-color: var(--secondColor);
   color: white;
-  /* padding: 10px 50px; */
 }
 

@@ -1,5 +1,5 @@
 <div class="background">
-  <div class="fw-bold pt-5 p-lg-4" routerLink="/menu">Your Cart</div>
+  <div class="fw-bold pt-5 p-lg-4">Your Cart</div>
   <section id="cart-container" class="container my-5">
     <table class="table" w-75 m-auto>
       <thead>
@@ -41,8 +41,8 @@
       </tbody>
     </table>
     <div class="confirm d-flex justify-content-between">
-      <button class="confirmbtn" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Home</button>
-      <button class="confirmbtn" (click)="confirm()">
+      <button class=" btn btn-dark" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Menu</button>
+      <button class="conf btn" (click)="confirm()" *ngIf="inCard.length > 0">
         Confirm
         <i class="bi bi-arrow-right"></i>
       </button>

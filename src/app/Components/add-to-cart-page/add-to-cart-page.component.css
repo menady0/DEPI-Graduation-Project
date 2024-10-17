@@ -85,9 +85,10 @@
 }
 
 .confirmbtn {
-
-  background-color: #ff6600;
   border-radius: 25px;
   padding: 5px 20px;
   border: none;
+}
+.conf{
+  background-color: #ff6600;
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, numberAttribute, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, input, numberAttribute, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProductsService } from '../../Modules/products.service';
 import { Product } from '../../Modules/Product';
@@ -15,9 +15,11 @@ import { AddToCartPageComponent } from '../add-to-cart-page/add-to-cart-page.com
 })
 export class MenuPageComponent{
   showProducts:Product[];
+  x:boolean;
   constructor(private _ProductsService:ProductsService){
     this.showProducts = _ProductsService.getProducts()
     this.cart = 0
+    this.x = _ProductsService.test()
   }
   showAll:boolean = false;
   getPro(){
@@ -27,7 +29,6 @@ export class MenuPageComponent{
     this.showAll = !this.showAll;
   }
   search(input:string){
-    console.log(input);
     if(input != '')
       this.showProducts = this._ProductsService.search(input)
     else 
@@ -64,7 +65,6 @@ export class MenuPageComponent{
     // else if(parsedQuantity < card.quantity){
     //   console.log("2");
     // }
-    console.log(`Quantity in the object: ${card.quantity}`);
     this.addToCart()
   }
 
@@ -105,7 +105,6 @@ export class MenuPageComponent{
     //   else 
     //     card.quantity--;
     // }
-    console.log(this.showProducts);
     this.addToCart()
   }
 
@@ -113,12 +112,18 @@ export class MenuPageComponent{
   cart:number
   addToCart():void {
     this.cart = 0
-    // this.cart = 0
     for(let i = 0; i < this.showProducts.length; i++){
       this.cart += this.showProducts[i].quantity
     }
   }
-  returnToCard():number{
-    return 0
+  onKeyDown(event:KeyboardEvent, input:string){
+    if (event.key === 'Enter') {
+      this.search(input)
+    }
+  }
+  quantityPress(event:KeyboardEvent, product:Product, input:string){
+    if(event.key === "Enter"){
+      this.add(product, input)
+    }
   }
 }

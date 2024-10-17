@@ -1,5 +1,5 @@
 .org-color{
-  color: #E47F31;
+  color: var(--secondColor);
 }
 .parent{
   background-color: #0C0904;
@@ -15,5 +15,5 @@
   padding-right: 20px;
 }
 .links i {
-  color: #E47F31;
+  color: var(--secondColor);
 }

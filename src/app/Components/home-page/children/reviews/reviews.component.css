@@ -3,17 +3,17 @@
   padding: 50px 0 20px 0;
 }
 .reviewshead{
-  color: #e47f31;
+  color: var(--secondColor);
   padding-bottom: 10px;
 }
 
 .btncolor{
-  background-color: #e47f31;
+  background-color: var(--secondColor);
 }
 .reviewtext{
   align-items: center;
   padding-bottom: 50px;
-  color: black;
+  color: var(--firstColor);
 }
 .carousel-item img,
 .carousel-item img,
@@ -23,7 +23,7 @@
 }
 .bi-quote{
   font-size: 100px;
-  color: #e47f31;
+  color: var(--secondColor);
 }
 .d-none img,
 .d-none img,
@@ -35,10 +35,10 @@
 }
 .clientname{
   padding: 30px 0 50px 0;
-  color: black;
+  color: var(--firstColor);
   font-size: 20px;
 }
 .box{
-  background-color: #d8d2c2;
+  background-color: var(--thirdColor);
   padding-bottom: 60px;
 }

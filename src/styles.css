@@ -1,3 +1,8 @@
+:root {
+  --firstColor: #1E1E1E;
+  --secondColor: #E47F31;
+  --thirdColor: #D8D2C2;
+}
 body{
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;

@@ -59,7 +59,7 @@ export class ProductsService {
       },
       {
         id: 1,
-        name: 'Pumpkin Cream Cold Brew.jpg',
+        name: 'Pumpkin Cream Cold Brew',
         price: 95,
         imgURL: 'Menu/ice coffe/Pumpkin Cream Cold Brew.jpg',
         quantity: 0,
@@ -182,9 +182,13 @@ export class ProductsService {
     return this.products;
   }
   search(input: string): Product[] {
-    return this.products.filter((product) => product.name == input);
+    return this.products.filter((product) => product.name.toLocaleLowerCase().includes(input));
   }
-  addToCard(){
+  addToCard(): Product[]{
     return this.products.filter(pro => pro.quantity > 0)
   }
+  test(): boolean{
+    let x = this.products.filter(pro => pro.quantity > 0)
+    return x.length > 0 ? true : false
+  } 
 }
