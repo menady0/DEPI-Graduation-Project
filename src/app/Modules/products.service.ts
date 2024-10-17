@@ -190,6 +190,7 @@ export class ProductsService {
   }
   cartCount: number = 0;
   counting():number{
+    this.cartCount = 0;
     for(let i = 0; i < this.products.length; i++){
       this.cartCount += this.products[i].quantity
     }

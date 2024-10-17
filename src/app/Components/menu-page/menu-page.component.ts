@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, numberAttribute, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProductsService } from '../../Modules/products.service';
 import { Product } from '../../Modules/Product';
