@@ -13,13 +13,16 @@ import { AddToCartPageComponent } from '../add-to-cart-page/add-to-cart-page.com
   templateUrl: './menu-page.component.html',
   styleUrl: './menu-page.component.css'
 })
-export class MenuPageComponent{
+export class MenuPageComponent implements OnInit{
   showProducts:Product[];
-  x:boolean;
+
   constructor(private _ProductsService:ProductsService){
     this.showProducts = _ProductsService.getProducts()
     this.cart = 0
-    this.x = _ProductsService.test()
+  }
+
+  ngOnInit(): void {
+    this.cart = this._ProductsService.counting();    
   }
   showAll:boolean = false;
   getPro(){
@@ -33,15 +36,12 @@ export class MenuPageComponent{
       this.showProducts = this._ProductsService.search(input)
     else 
       this.showProducts = this._ProductsService.getProducts();
-    // for(let i = 0; i < this.showProducts.length; i++){
-    // }
   }
   add(card:Product, quantity:string){
     const parsedQuantity = +quantity; 
     if(quantity === ''){
       alert("Enter a number")
       return;
-      // card.quantity = +quantity
     }
     else {
       if(card.quantity == parsedQuantity)
@@ -52,19 +52,7 @@ export class MenuPageComponent{
       }
       else
         card.quantity = parsedQuantity
-        // card.quantity++
     }
-    // else if (parsedQuantity == card.quantity){
-    //   console.log("3");
-    //   card.quantity++
-    // }
-    // else if(parsedQuantity > card.quantity){
-    //   console.log("1");
-    //   card.quantity = parsedQuantity
-    // }
-    // else if(parsedQuantity < card.quantity){
-    //   console.log("2");
-    // }
     this.addToCart()
   }
 
@@ -85,27 +73,12 @@ export class MenuPageComponent{
       }
       else {
         alert(`You only have ${card.quantity} in the cart`)
-        // quantity = card.quantity
       }
     }
     else {
         alert("Nothing to remove")
     }
-    // if(+quantity <= 0){
-    //   alert("Nothing to remove")
-    // }
-    // else {
-    //   if(+quantity > 0){
-    //     for(let i = 0; i < this.showProducts.length; i++){
-    //       if(this.showProducts[i].name == card.name){
-    //         card.quantity -= +quantity;
-    //       }
-    //     }
-    //   }
-    //   else 
-    //     card.quantity--;
-    // }
-    this.addToCart()
+    this._ProductsService.counting()
   }
 
   // Add to cart

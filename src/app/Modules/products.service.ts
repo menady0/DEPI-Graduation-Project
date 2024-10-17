@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from './Product';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -187,8 +188,11 @@ export class ProductsService {
   addToCard(): Product[]{
     return this.products.filter(pro => pro.quantity > 0)
   }
-  test(): boolean{
-    let x = this.products.filter(pro => pro.quantity > 0)
-    return x.length > 0 ? true : false
-  } 
+  cartCount: number = 0;
+  counting():number{
+    for(let i = 0; i < this.products.length; i++){
+      this.cartCount += this.products[i].quantity
+    }
+    return this.cartCount;
+  }
 }
