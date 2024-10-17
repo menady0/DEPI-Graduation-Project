@@ -1,4 +1,4 @@
-<div class="background">
+<div class="background" id="goTop">
   <a routerLink="/home">
     <i class="bi bi-arrow-left-short back"></i>
   </a>
@@ -37,7 +37,7 @@
               <i class="bi bi-dash" (click)="remove(product, quan.value)"></i>
               <input
                 type="number"
-                (keydown)="quantityPress($event,product, quan.value)"
+                (keydown)="quantityPress($event, product, quan.value)"
                 class="text-center"
                 [value]="product.quantity"
                 #quan

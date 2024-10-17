@@ -30,6 +30,9 @@ export class MenuPageComponent implements OnInit{
   }
   btnToggle(){
     this.showAll = !this.showAll;
+    if (!this.showAll) {
+      window.scrollTo(0, 0);
+    }
   }
   search(input:string){
     if(input != '')
