@@ -125,10 +125,11 @@
   border-radius: 25px;
   padding: 8px 25px;
   border: 1px solid var(--secondColor);
+  transition: 0.5s;
 }
 .contactus:hover {
   background-color: var(--secondColor);
-  
+  transform: translateY(-5px);
 }
 .contactus a {
   color: white;
@@ -140,8 +141,14 @@
   font-size: 18px;
 }
 
-
-
+.order {
+  background-color: #ff6600;
+  color: white;
+  transition: .5s;
+}
+.order:hover {
+  transform: scale(1.1)
+}
 
 
 .logos{
