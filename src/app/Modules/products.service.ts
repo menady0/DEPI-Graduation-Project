@@ -177,7 +177,6 @@ export class ProductsService {
         quantity: 0,
       },
     ];
-
   }
   getProducts(): Product[] {
     return this.products;

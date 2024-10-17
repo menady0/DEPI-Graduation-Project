@@ -19,6 +19,13 @@ export class MenuPageComponent{
     this.showProducts = _ProductsService.getProducts()
     this.cart = 0
   }
+  showAll:boolean = false;
+  getPro(){
+    return this.showAll ? this.showProducts : this.showProducts.slice(0, 6);
+  }
+  btnToggle(){
+    this.showAll = !this.showAll;
+  }
   search(input:string){
     console.log(input);
     if(input != '')
@@ -110,5 +117,8 @@ export class MenuPageComponent{
     for(let i = 0; i < this.showProducts.length; i++){
       this.cart += this.showProducts[i].quantity
     }
+  }
+  returnToCard():number{
+    return 0
   }
 }

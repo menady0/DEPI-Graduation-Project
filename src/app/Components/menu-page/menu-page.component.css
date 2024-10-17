@@ -117,3 +117,12 @@ section p {
     padding-left: 20px;
   }
 }
+.divBtn {
+  padding: 20px;
+}
+.showBtn {
+  padding: 5px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #E47F31;
+}
