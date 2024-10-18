@@ -1,12 +1,12 @@
 :root {
-  --firstColor: #1E1E1E;
+  --firstColor: #0C0904;
   --secondColor: #E47F31;
   --thirdColor: #D8D2C2;
 }
 body{
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
-  font-weight: 100px;
+  font-weight: 100;
   font-style: normal;
 }
 @keyframes appear {
@@ -22,5 +22,5 @@ body{
 .block {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 15%;
 }

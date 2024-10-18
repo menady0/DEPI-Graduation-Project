@@ -1,62 +1,69 @@
-<div class="d1">
-  <div class="container">
-      <!-- Navbar -->
-  <nav class="navbar">
-      <div routerLink="/home" class="logo">
-        <h1 class="logocolor">Coffee<span class="org-color">Fly</span></h1>
-        <h5 class="logotext">get your favourite</h5>
+<header>
+  <div class="header">
+    <div class="container">
+      <div class="bi bi-list" id="menu-icon" (click)="menuClick()"></div>
+      <a routerLink="/home" class="logoM">
+        <img src="header/logo.png" alt="">
+      </a>
+      <ul class="navlist">
+        <li><a routerLink="/home" (click)="menuClick()">Home</a></li>
+        <li><a routerLink="/menu">Menu</a></li>
+        <li><a routerLink="/home" fragment="about" (click)="menuClick()">About Us</a></li>
+        <li><a routerLink="/home" fragment="reviews" (click)="menuClick()">Reviews</a></li>
+      </ul>
+      <div class="right-content">
+        <a href="" class="nav-btn">Contact Us</a>
       </div>
-      <ul class="nav-links">
-          <li class="main-links"><a routerLink="/home" class="active">Home</a></li>
-          <li class="main-links"><a routerLink="/menu" class="active">Menu</a></li>
-          <li class="main-links"><a routerLink="/home" fragment="about" class="active">About</a></li>
-          <li class="main-links"><a routerLink="/home" fragment="reviews" class="active">Reviews</a></li>
-        </ul>
-      <div class="contact">
-        <button routerLink="/contact" class="contactus"><a class="contact">Contact us</a></button>
-      </div>
-  </nav>
-
-  <div class="d2">
-      <h1>Fuel Your Day <br>With Flafor</h1>
-      <p>Discover rich coffee, delicious bits,and a <br> warm atmosphere where every visit feels like <br> a retreat from the busy world.</p>
-      <button routerLink="/menu" type="button" class="btn con fw-bold rounded-pill ps-5 pe-5 order">Order Now</button>
-  </div>
-  <div class="d-flex align-items-center scroll">
-    <div class="arrow d-flex flex-column-reverse">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-        <path fill="#e47f31" fill-rule="evenodd" d="m6 7l6 6l6-6l2 2l-8 8l-8-8z" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-        <path fill="#e47f31" fill-rule="evenodd" d="m6 7l6 6l6-6l2 2l-8 8l-8-8z" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-        <path fill="#e47f31" fill-rule="evenodd" d="m6 7l6 6l6-6l2 2l-8 8l-8-8z" />
-      </svg>
-    </div>
-    <div class="scrollText ms-3">
-      Scroll Down To <br>
-      Learn More
     </div>
   </div>
-  <div class="d-flex flex-column socialMedia">
-    <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank">
-      <i class="bi bi-facebook"></i>
-    </a>
-    <a href="https://www.instagram.com/" target="_blank">
-      <i class="bi bi-instagram"></i>
-    </a>
-    <a href="https://web.whatsapp.com/" target="_blank">
-      <i class="bi bi-whatsapp"></i>
-    </a>
+
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Fuel Your Day With Flavor</h1>
+      <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">
+        Discover rich coffee, delicious bits, and a warm atmosphere where every visit feels like a retreat from the busy world.
+      </p>
+      
+      <div class="main-hero" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
+        <a class="btn">Order Now</a>
+      </div>
+    </div>
   </div>
+  </section>
+
+  <div class="icons">
+    <div class="container">
+      <div class="parent">
+        <a href=""><i class="bi bi-facebook" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"></i></a>
+        <a href=""><i class="bi bi-instagram" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"></i></a>
+        <a href=""><i class="bi bi-whatsapp" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800"></i></a>
+      </div>
+    </div>
   </div>
-</div>
+
+  <div class="scroll" data-aos="fade-down" data-aos-duration="1400" data-aos-delay="550">
+    <div class="container">
+      <div class="parent">
+        <div class="i">
+          <i class="bi bi-chevron-down"></i>
+          <i class="bi bi-chevron-down"></i>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <span>
+          Scroll Down To <br>
+          Read More
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
 
 
 
 
-<div class="logos">
+<div class="logos" *ngIf="hideSections()">
   <div class="row w-100 block">
     <div class="col-sm-10 col-md-4 mb-3 block">
       <i class="bi bi-cup-hot logo "></i>
@@ -75,13 +82,13 @@
 
 
 
-<div class="bestsellers">
+<div class="bestsellers" *ngIf="hideSections()">
   <div class="besttext block">
     <h1 class="besthead">Best Sellers</h1>
   </div>
   <div class="container block">
-    <div class="row block">
-      <div class="col-sm-8 col-md-4 mb-3 block">
+    <div class="row block justify-content-center ps-4 pe-4">
+      <div class="col-sm-7 col-md-4 mb-3 block">
         <div class="card pb-3 block">
           <div class="block">
             <img src="Menu/ice coffe/IcedCoffee.jpeg" class="card-img-top" alt="...">
@@ -92,7 +99,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8 col-md-4 mb-3 block">
+      <div class="col-sm-7 col-md-4 mb-3 block">
         <div class="card pb-3 block">
           <div class="block">
             <img src="Menu/ice coffe/Iced Espresso.jpg" class="card-img-top" alt="...">
@@ -103,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8 col-md-4 mb-3 block">
+      <div class="col-sm-7 col-md-4 mb-3 block">
         <div class="card pb-3 block">
           <div class="block">
             <img src="Menu/ice coffe/Iced Caffè Mocha.jpg" class="card-img-top" alt="...">

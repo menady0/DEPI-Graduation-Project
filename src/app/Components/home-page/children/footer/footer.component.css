@@ -7,13 +7,14 @@
   padding: 40px 0;
 }
 .links {
-  width: 10%;
+  width: 50%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
 }
 .links i {
   color: var(--secondColor);
+  margin: 0 5px;
 }

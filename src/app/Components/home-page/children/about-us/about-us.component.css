@@ -9,9 +9,16 @@
 .AboutParagraph{
   padding: 10px 0 0 0;
 }
-.ourmission{
-  padding: 20px 30px;
+.our-mission .parent{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
 }
+.our-mission .imgs {
+  text-align: center;
+}
+
 .photos{
 display: flex;
 justify-content: center;
@@ -22,9 +29,6 @@ padding-left: 200px;
 }
 .missonP{
   padding: 20px 0px;
-}
-.mission{
-  padding: 60px 0 0 30px;
 }
 .parent2{
   background-color: #0C0904;
@@ -45,7 +49,16 @@ color: var(--secondColor);
   text-align: center;
   padding: 0 0 20px 0;
 }
-
+@media (max-width: 950px) {
+  .our-mission .parent{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .our-mission .imgs {
+    display: none;
+  }
+}
 .box {
   background-color: var(--thirdColor);
   padding: 50px 0;

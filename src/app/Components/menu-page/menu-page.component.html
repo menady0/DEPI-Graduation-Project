@@ -26,7 +26,7 @@
     <div class="parent">
       <div class="row">
         <div class="col-sm-6 col-md-4" *ngFor="let product of getPro()">
-          <div class="myCard">
+          <div class="myCard" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
             <img [src]="product.imgURL" alt="" />
             <!-- <span class="text-primary">cold coffee</span> -->
             <div class="d-flex justify-content-between">

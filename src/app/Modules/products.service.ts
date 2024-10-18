@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Product } from './Product';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -178,6 +177,8 @@ export class ProductsService {
         quantity: 0,
       },
     ];
+
+    this.menuClicked = true;
   }
   getProducts(): Product[] {
     return this.products;
@@ -196,4 +197,6 @@ export class ProductsService {
     }
     return this.cartCount;
   }
+
+  menuClicked:boolean;
 }
