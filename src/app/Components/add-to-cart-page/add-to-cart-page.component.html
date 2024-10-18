@@ -1,12 +1,11 @@
 <div class="background">
-  <div class="fw-bold pt-5 p-lg-4">Your Cart</div>
-  <section id="cart-container" class="container my-5">
+  <div class="fw-bold pt-5 p-4">Your Cart</div>
+  <section id="cart-container" class="container">
     <table class="table" w-75 m-auto>
       <thead>
         <tr>
           <td>ID</td>
-          <td>Image</td>
-          <td>Product</td>
+          <td colspan="2">Product</td>
           <td>Price</td>
           <td>Quantity</td>
           <td>Total</td>
@@ -42,7 +41,8 @@
     </table>
     <div class="confirm d-flex justify-content-between">
       <button class=" btn btn-dark" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Menu</button>
-      <button class="conf btn" (click)="confirm()" *ngIf="inCard.length > 0">
+      <!-- <button class="conf btn" (click)="confirm()" *ngIf="inCard.length > 0"> -->
+      <button class="btn btn-success" (click)="confirm()">
         Confirm
         <i class="bi bi-arrow-right"></i>
       </button>
