@@ -10,17 +10,26 @@
         <th>Total</th>
         <th>Delete</th>
       </thead>
-      
+
       <tbody>
-        <tr *ngFor="let product of inCard">
-          <td data-label="ID">{{product.id}}</td>
+        <tr
+          *ngFor="let product of inCard; let i = index"
+          [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+          data-aos-duration="1000"
+          [attr.data-aos-delay]="i * 400"
+        >
+          <td data-label="ID">{{ product.id }}</td>
           <td data-label="Product Image"><img [src]="product.imgURL" /></td>
-          <td data-label="Product Name">{{product.name}}</td>
-          <td data-label="Price">{{product.price | currency}}</td>
-          <td data-label="Quantity">{{product.quantity}}</td>
-          <td data-label="Quantity">{{product.quantity * product.price | currency}}</td>
+          <td data-label="Product Name">{{ product.name }}</td>
+          <td data-label="Price">{{ product.price | currency }}</td>
+          <td data-label="Quantity">{{ product.quantity }}</td>
+          <td data-label="Quantity">
+            {{ product.quantity * product.price | currency }}
+          </td>
           <td data-label="Delete">
-            <button class="x" (click)="delete(product)"><i class="bi bi-x"></i></button>
+            <button class="x" (click)="delete(product)">
+              <i class="bi bi-x"></i>
+            </button>
           </td>
         </tr>
         <tr *ngIf="inCard.length == 0" class="emptyCart">
@@ -29,10 +38,15 @@
       </tbody>
     </table>
 
-
     <div class="confirm d-flex justify-content-between">
-      <button class=" btn btn-dark" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Menu</button>
-      <button class="btn btn-success" (click)="confirm()" *ngIf="inCard.length > 0">
+      <button class="btn btn-dark" routerLink="/menu">
+        <i class="bi bi-arrow-left"></i> Back To Menu
+      </button>
+      <button
+        class="btn btn-success"
+        (click)="confirm()"
+        *ngIf="inCard.length > 0"
+      >
         Confirm
         <i class="bi bi-arrow-right"></i>
       </button>
