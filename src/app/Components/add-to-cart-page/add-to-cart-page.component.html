@@ -1,48 +1,38 @@
 <div class="background">
-  <div class="fw-bold pt-5 p-4">Your Cart</div>
-  <section id="cart-container" class="container">
-    <table class="table" w-75 m-auto>
+  <section class="container">
+    <div class="fw-bold fs-4 pt-5 p-4">Your Cart</div>
+    <table class="table">
       <thead>
-        <tr>
-          <td>ID</td>
-          <td colspan="2">Product</td>
-          <td>Price</td>
-          <td>Quantity</td>
-          <td>Total</td>
-          <td>Delete</td>
-        </tr>
+        <th>ID</th>
+        <th colspan="2">Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Delete</th>
       </thead>
-
+      
       <tbody>
         <tr *ngFor="let product of inCard">
-          <td>
-            <h5 class="mt-4">{{product.id}}</h5>
+          <td data-label="ID">{{product.id}}</td>
+          <td data-label="Product Image"><img [src]="product.imgURL" /></td>
+          <td data-label="Product Name">{{product.name}}</td>
+          <td data-label="Price">{{product.price | currency}}</td>
+          <td data-label="Quantity">{{product.quantity}}</td>
+          <td data-label="Quantity">{{product.quantity * product.price | currency}}</td>
+          <td data-label="Delete">
+            <button class="x" (click)="delete(product)"><i class="bi bi-x"></i></button>
           </td>
-          <td>
-            <img [src]="product.imgURL" alt="" />
-          </td>
-          <td>
-            <h5 class="mt-4">{{product.name}}</h5>
-          </td>
-          <td>
-            <h5 class="mt-4">{{product.price | currency}}</h5>
-          </td>
-          <td>
-            <p>{{product.quantity}}</p>
-          </td>
-          <td>
-            <h5 class="mt-4">{{product.quantity * product.price | currency}}</h5>
-          </td>
-          <td>
-            <button class="x mt-3" (click)="delete(product)"><i class="bi bi-x"></i></button>
-          </td>
+        </tr>
+        <tr *ngIf="inCard.length == 0" class="emptyCart">
+          <td colspan="7">Your cart is empty</td>
         </tr>
       </tbody>
     </table>
+
+
     <div class="confirm d-flex justify-content-between">
       <button class=" btn btn-dark" routerLink="/menu"><i class="bi bi-arrow-left"></i> Back To Menu</button>
-      <!-- <button class="conf btn" (click)="confirm()" *ngIf="inCard.length > 0"> -->
-      <button class="btn btn-success" (click)="confirm()">
+      <button class="btn btn-success" (click)="confirm()" *ngIf="inCard.length > 0">
         Confirm
         <i class="bi bi-arrow-right"></i>
       </button>
