@@ -184,7 +184,7 @@ export class ProductsService {
     return this.products;
   }
   search(input: string): Product[] {
-    return this.products.filter((product) => product.name.toLocaleLowerCase().includes(input));
+    return this.products.filter((product) => product.name.toLowerCase().includes(input.toLowerCase()));
   }
   addToCard(): Product[]{
     return this.products.filter(pro => pro.quantity > 0)

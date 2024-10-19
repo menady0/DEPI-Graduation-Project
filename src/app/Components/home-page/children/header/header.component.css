@@ -108,7 +108,6 @@ section {
   font-size: 15px;
   font-weight: 500;
   transition: all .6s ease;
-  margin-right: 20px;
 }
 .btn:hover {
   transform: scale(1.1);
@@ -174,19 +173,6 @@ section {
 .scroll i:first-child {
   color: var(--secondColor);
   opacity: .3;
-}
-
-
-@media (max-width: 1770px) {
-  /* header {
-    padding: 22px 4%;
-  }
-  .icons {
-    padding: 0 4%;
-  }
-  .scroll {
-    right: 4%;
-  } */
 }
 
 @media (max-width: 950px) {
