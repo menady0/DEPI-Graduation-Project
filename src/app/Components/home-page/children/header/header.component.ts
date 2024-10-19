@@ -23,8 +23,5 @@ export class HeaderComponent {
       navlist.classList.toggle('open');
     }
   }
-  hideSections():boolean {
-    return this._ProductsService.menuClicked
-  }
 
 }

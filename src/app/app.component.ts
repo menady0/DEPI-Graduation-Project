@@ -13,5 +13,5 @@ import { MenuPageComponent } from './Components/menu-page/menu-page.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Project';
+  WebsiteTitle = 'CoffeeFly | Your go-to spot for drinks and desserts on the fly';
 }

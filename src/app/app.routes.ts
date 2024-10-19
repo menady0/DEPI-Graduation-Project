@@ -7,7 +7,7 @@ import { ContactPageComponent } from './Components/contact-page/contact-page.com
 import { AddToCartPageComponent } from './Components/add-to-cart-page/add-to-cart-page.component';
 
 export const routes: Routes = [
-  {path: 'home',title: "Home", component: HomePageComponent},
+  {path: 'home',title: "CoffeeFly | get your favourite", component: HomePageComponent},
   {path: 'menu',title: "Our Menu", component: MenuPageComponent},
   {path: 'about', component: AboutUsComponent},
   {path: 'contact', component: ContactPageComponent},
